@@ -1,0 +1,89 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00bcd4; /* Tick color: Deep Teal */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #01272c; /* Hover dark green */
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Close icon inside mobile menu */
+  .close-icon {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 60%;
+      height: 100%;
+      background-color: #00bcd4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease-in;
+    }
+  
+    .nav-links.open {
+      right: 0;
+    }
+  
+    .nav-links li {
+      margin: 1.5rem 0;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .close-icon {
+      display: block;
+      color: white;
+    }
+  }
+  
